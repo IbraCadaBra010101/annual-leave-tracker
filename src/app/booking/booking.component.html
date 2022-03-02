@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <h1 class="modal-header">Employee Bookings</h1>
+  <section>
+    <div class="row">
+      <div class="col-md-6 col-lg-8 col-sm-12">
+        <table class="table table-striped"
+               *ngIf='bookings.length'>
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Department Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Amount of days</th>
+            <th scope="col">Booking type</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr *ngFor="let item of bookings let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.employeeFirstName}}</td>
+            <td>{{item.employeeLastName}}</td>
+            <td>{{item.fromDate}}</td>
+            <td>{{item.toDateDate}}</td>
+            <td>{{item.numberOfDays}}</td>
+            <td>{{item.bookingType}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+
+
